@@ -3,9 +3,13 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {fontFamily: {
+		extend: {
+			aspectRatio:{
+				thumbnail: '1.5',
+			},
+			fontFamily: {
 			sans: ['Cabin', ...defaultTheme.fontFamily.sans],
 		}},
 	},
-	plugins: [],
+	plugins: [require('@tailwindcss/typography')],
 }
